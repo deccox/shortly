@@ -5,10 +5,12 @@ require('vendor\autoload.php');
 
 use App\Encrypt;
 
-var_dump($_SESSION);
 $dados = $_SESSION['short_url'] ?? null;
 
 ?>
+
+
+
 
 
 <!DOCTYPE html>
@@ -23,7 +25,7 @@ $dados = $_SESSION['short_url'] ?? null;
     <?php echo $dados ?>
     <form action="form-validation.php" method="post">
 
-        <input type="text" name="url" id=""  placeholder="insert url">
+        <input type="text" name="url" id=""  placeholder="insert url" required>
         <input type="submit" value="enviar">
     </form>
 </body>
